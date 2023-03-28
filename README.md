@@ -37,7 +37,7 @@
 4) Working microSD card
 ![microsd](https://user-images.githubusercontent.com/1933140/228342958-e6d1cef9-28b7-4c08-b65a-cd5200992448.png)
 
-6) Installed and prepared OpenIPC BURN utility
+6) Installed and prepared [OpenIPC BURN utility](https://github.com/OpenIPC/burn)
 https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
 
 ### Connecting USB-UART adapter
