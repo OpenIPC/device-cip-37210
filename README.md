@@ -25,6 +25,23 @@
 
 ![05-req1](https://user-images.githubusercontent.com/1933140/228339564-a0bc325c-505c-4a7a-9940-fa5fa8cb78bf.png)
 
+2) Phillips screwdriver
+![screwdriver](https://user-images.githubusercontent.com/1933140/228342881-c68d8a80-a12d-49b6-bbca-eed6fcd0fd44.png)
+
+3) USB-UART adapter and wires.
+   Don't forget to select 3.3 volts jumper.
+   We recommend this adapter:
+![screwdriver](https://user-images.githubusercontent.com/1933140/228342908-f756dfd6-3341-4aa0-bc64-8fd51c1b67c6.png)
+
+4) Working microSD card
+![microsd](https://user-images.githubusercontent.com/1933140/228342958-e6d1cef9-28b7-4c08-b65a-cd5200992448.png)
+
+6) Installed and prepared OpenIPC BURN utility
+https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
+
+### Connecting USB-UART adapter
+
+### Partitions
 
 More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
 
