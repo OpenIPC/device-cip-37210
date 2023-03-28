@@ -20,28 +20,35 @@
 
 
 ### Requirements
+
 1) WiFi IP Camera Smartwares CIP-37210 with SoC HiSilicon 3518EV200 version (not with SoC Ingenic T21). 
    At the moment there are known of the existence of three modifications of the camera with this name.
 
 ![05-req1](https://user-images.githubusercontent.com/1933140/228339564-a0bc325c-505c-4a7a-9940-fa5fa8cb78bf.png)
 
 2) Phillips screwdriver
+
 ![screwdriver](https://user-images.githubusercontent.com/1933140/228342881-c68d8a80-a12d-49b6-bbca-eed6fcd0fd44.png)
 
 3) USB-UART adapter and wires.
-   Don't forget to select 3.3 volts jumper.
-   We recommend this adapter:
+
+Don't forget to select 3.3 volts jumper.
+We recommend this adapter:
 ![232](https://user-images.githubusercontent.com/1933140/228343595-83e54ffb-c27d-4c92-b165-d7f48b949a6d.png)
 
 
 4) Working microSD card
+
 ![microsd](https://user-images.githubusercontent.com/1933140/228342958-e6d1cef9-28b7-4c08-b65a-cd5200992448.png)
 
 6) Installed and prepared [OpenIPC BURN utility](https://github.com/OpenIPC/burn)
+
 https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
 
 ### Connecting USB-UART adapter
+
 Сonnect the USB-UART adapter to the camera according to the circuit diagram:
+
 ![07-USB-UART](https://user-images.githubusercontent.com/1933140/228344385-f16179a3-aabb-4d56-9070-aac4da2129b6.png)
 
 ### Partitions
