@@ -5,7 +5,7 @@
 
 ### Table of contents
 
-1)  Requirements
+1)  [Requirements](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#requirements)
 2)  Connecting USB-UART adapter
 3)  Partitions
 4)  Backup factory firmware
