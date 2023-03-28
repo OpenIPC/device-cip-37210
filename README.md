@@ -32,8 +32,9 @@
 
 3) USB-UART adapter and wires.
 
-Don't forget to select 3.3 volts jumper.
-We recommend this adapter:
+   Don't forget to select 3.3 volts jumper.
+
+   We recommend this adapter:
 
 ![232](https://user-images.githubusercontent.com/1933140/228343595-83e54ffb-c27d-4c92-b165-d7f48b949a6d.png)
 
