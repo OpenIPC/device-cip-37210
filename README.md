@@ -30,8 +30,6 @@
 
 ![screwdriver](https://user-images.githubusercontent.com/1933140/228342881-c68d8a80-a12d-49b6-bbca-eed6fcd0fd44.png)
 
-[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
-
 3) USB-UART adapter and wires.
 
    Don't forget to select 3.3 volts jumper.
@@ -48,6 +46,9 @@
 6) Installed and prepared [OpenIPC BURN utility](https://github.com/OpenIPC/burn)
 
 https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
 
 ### Connecting USB-UART adapter 
 
