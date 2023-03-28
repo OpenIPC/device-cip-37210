@@ -3,7 +3,7 @@
 
 ![cip-37210_0](https://user-images.githubusercontent.com/1933140/228334552-0f611eeb-6b24-4354-93e4-cfd9a63b9f36.jpg)
 
-###Table of contents
+### Table of contents
 
 1)  Requirements
 2)  Connecting USB-UART adapter
@@ -17,7 +17,7 @@
 10)  Frequently asked questions
 11) Rolling back to factory firmware from backup
 
-###Requirements
+### Requirements
 
 More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
 
