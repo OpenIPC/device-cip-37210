@@ -19,7 +19,7 @@
 
 
 
-### Requirements
+### Requirements [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 1) WiFi IP Camera Smartwares CIP-37210 with SoC HiSilicon 3518EV200 version (not with SoC Ingenic T21). 
    At the moment there are known of the existence of three modifications of the camera with this name.
@@ -47,13 +47,13 @@
 
 https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
 
-### Connecting USB-UART adapter
+### Connecting USB-UART adapter [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 Сonnect the USB-UART adapter to the camera according to the circuit diagram:
 
 ![07-USB-UART](https://user-images.githubusercontent.com/1933140/228344385-f16179a3-aabb-4d56-9070-aac4da2129b6.png)
 
-### Partitions
+### Partitions [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 CIP-37210 16mb SPI flash partitions table for OpenIPC
 |  | Decimal size mega bytes | Decimal size kilo bytes | Decimal size  bytes | Hexadecimal size bytes | Hexadecimal start address | Hexadecimal end address |
 | --- | --- | --- | --- | --- | --- | --- |
