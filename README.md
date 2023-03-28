@@ -6,8 +6,8 @@
 ### Table of contents
 
 1)  [Requirements](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#requirements)
-2)  Connecting USB-UART adapter
-3)  Partitions
+2)  [Connecting USB-UART adapter](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter)
+3)  [Partitions](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#partitions)
 4)  Backup factory firmware
 5)  Flashing OpenIPC U-Boot
 6)  Flashing OpenIPC kernel
