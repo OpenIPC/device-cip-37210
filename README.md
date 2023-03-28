@@ -19,7 +19,7 @@
 
 
 
-### Requirements [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+### Requirements
 
 1) WiFi IP Camera Smartwares CIP-37210 with SoC HiSilicon 3518EV200 version (not with SoC Ingenic T21). 
    At the moment there are known of the existence of three modifications of the camera with this name.
@@ -29,6 +29,8 @@
 2) Phillips screwdriver
 
 ![screwdriver](https://user-images.githubusercontent.com/1933140/228342881-c68d8a80-a12d-49b6-bbca-eed6fcd0fd44.png)
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 3) USB-UART adapter and wires.
 
@@ -47,13 +49,15 @@
 
 https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
 
-### Connecting USB-UART adapter [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+### Connecting USB-UART adapter 
 
 Сonnect the USB-UART adapter to the camera according to the circuit diagram:
 
 ![07-USB-UART](https://user-images.githubusercontent.com/1933140/228344385-f16179a3-aabb-4d56-9070-aac4da2129b6.png)
 
-### Partitions [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
+### Partitions 
 CIP-37210 16mb SPI flash partitions table for OpenIPC
 |  | Decimal size mega bytes | Decimal size kilo bytes | Decimal size  bytes | Hexadecimal size bytes | Hexadecimal start address | Hexadecimal end address |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -75,6 +79,8 @@ It is responsible for initializing the hardware and starting the operating syste
 **The root filesystem** is the top-level directory of the filesystem. It must contain all of the files required to boot the Linux system before other filesystems are mounted. It must include all of the required executables and libraries required to boot the remaining filesystems.
 
 **Overlay** is used to create a read-only root file system that can be overlaid with a read-write file system. This allows the system to boot from a read-only file system, which is more secure and reliable, while still allowing users to make changes and store data in a separate overlay file system.
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 ### Backup factory firmware
 
