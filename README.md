@@ -31,7 +31,8 @@
 3) USB-UART adapter and wires.
    Don't forget to select 3.3 volts jumper.
    We recommend this adapter:
-![screwdriver](https://user-images.githubusercontent.com/1933140/228342908-f756dfd6-3341-4aa0-bc64-8fd51c1b67c6.png)
+![232](https://user-images.githubusercontent.com/1933140/228343595-83e54ffb-c27d-4c92-b165-d7f48b949a6d.png)
+
 
 4) Working microSD card
 ![microsd](https://user-images.githubusercontent.com/1933140/228342958-e6d1cef9-28b7-4c08-b65a-cd5200992448.png)
