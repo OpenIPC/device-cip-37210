@@ -64,17 +64,17 @@ CIP-37210 16mb SPI flash partitions table for OpenIPC
 | Rootfs data (overlay) | 8,6875 MB | 8896 KB | 9109504 bytes | 0x8B0000 | 0x750000 | 0xFFFFFF |
 | TOTAL | 16 MB | 16384 KB | 16777216 bytes | 0x1000000 |  |  |
 
-U-Boot (short for Universal Bootloader) is an open-source boot loader software that is commonly used in embedded systems and devices.
+**U-Boot** (short for Universal Bootloader) is an open-source boot loader software that is commonly used in embedded systems and devices.
 It is responsible for initializing the hardware and starting the operating system on the device.
 
-U-Boot environment (often referred to as "env") is a set of variables that are stored in non-volatile memory and used by U-Boot at boot time. These variables contain configuration information, such as the boot device, kernel parameters, and network settings.
+**U-Boot environment** (often referred to as "env") is a set of variables that are stored in non-volatile memory and used by U-Boot at boot time. These variables contain configuration information, such as the boot device, kernel parameters, and network settings.
 
-The Linux kernel (uImage) is a compressed image of the Linux kernel that contains the necessary components to start the operating system.
+**The Linux kernel (uImage)** is a compressed image of the Linux kernel that contains the necessary components to start the operating system.
  It includes the kernel code, device drivers, and other essential components. The uImage format includes a header that provides information about the kernel image, such as its size, load address, and entry point. It is used by U-Boot to load the kernel image into memory and start execution. The use of a compressed uImage helps to reduce the size of the kernel image, making it more suitable for embedded systems with limited storage capacity.
 
-The root filesystem is the top-level directory of the filesystem. It must contain all of the files required to boot the Linux system before other filesystems are mounted. It must include all of the required executables and libraries required to boot the remaining filesystems.
+**The root filesystem** is the top-level directory of the filesystem. It must contain all of the files required to boot the Linux system before other filesystems are mounted. It must include all of the required executables and libraries required to boot the remaining filesystems.
 
-Overlay is used to create a read-only root file system that can be overlaid with a read-write file system. This allows the system to boot from a read-only file system, which is more secure and reliable, while still allowing users to make changes and store data in a separate overlay file system.
+**Overlay** is used to create a read-only root file system that can be overlaid with a read-write file system. This allows the system to boot from a read-only file system, which is more secure and reliable, while still allowing users to make changes and store data in a separate overlay file system.
 
 ### Backup factory firmware
 
