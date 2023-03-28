@@ -18,6 +18,11 @@
 11) Rolling back to factory firmware from backup
 
 ### Requirements
+1) WiFi IP Camera Smartwares CIP-37210 with SoC HiSilicon 3518EV200 version (not with SoC Ingenic T21). 
+   At the moment there are known of the existence of three modifications of the camera with this name.
+
+![05-req1](https://user-images.githubusercontent.com/1933140/228339564-a0bc325c-505c-4a7a-9940-fa5fa8cb78bf.png)
+
 
 More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
 
