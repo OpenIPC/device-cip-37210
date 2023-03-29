@@ -473,7 +473,7 @@ Where:
 
 No errors should appear! 
 
-If not so, repeat from step `6` or you can do it from OpenIPC BURN utility same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microsd card before powering up).
+If not so, repeat from step `6` or you can do it from OpenIPC BURN utility same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microSD card before powering up).
 
 After this step the camera should boot from factory firmware.
 
