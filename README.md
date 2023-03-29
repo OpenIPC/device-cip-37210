@@ -85,14 +85,22 @@ It is responsible for initializing the hardware and starting the operating syste
 
 ### Backup factory firmware
 
-a) Clear the space on the microSD card for the backup dump  
+a) Clear the space on the microSD card for the backup dump
+
 b) Insert the prepared microSD card into the camera
+
 c) Connect the camera to the computer with the USB-UART adapter
+
 d) Read the content of spi flash to SoC RAM with OpenIPC U-Boot uploaded with OpenIPC BURN utility to camera
+
 e) Write the read out spi flash content from SoC RAM to the microSD card
+
 f) Take the microSD card from the camera and insert it into the computer
+
 g) Ignore the format proposal!
+
 h) Read the content of the microSD card to the computer
+
 
                                                    Warning! 
 DO NOT IGNORE ANY OF THE STEPS! ALSO IT IS INADMISSIBLE TO HAVE ANY ERRORS DURING EXECUTION OF ACTIONS AND COMMANDS!
