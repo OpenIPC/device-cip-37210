@@ -459,7 +459,7 @@ Where:
 
 `mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
 
-`fatls mmc 0` fullflash-CIP37210.bin should appear in output
+`fatls mmc 0` `fullflash-CIP37210.bin` should appear in output
 
 `fatload mmc 0 0x82000000 fullflash-CIP37210.bin` load `fullflash-CIP37210.bin` file from microSD card to the SoC RAM starting from address 0x82000000
 
