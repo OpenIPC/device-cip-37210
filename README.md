@@ -319,14 +319,14 @@ If not so, repeat from step 2.
 
 **Manual setup** 
 
-1) Download, extract and copy WiFi `rtl8188fu.ko` module to microSD card
+1) Download, extract and copy WiFi `rtl8188fu.ko` module to microSD card.
 
 [rtl8188fu.zip](https://github.com/OpenIPC/device-cip-37210/files/11104201/rtl8188fu.zip)
 
 
-2) Copy WiFi module to camera `/lib/modules/4.9.37/extra/rtl8188fu.ko` via microsd card (camera should be [connected](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) to PC via USB-UART)
+2) Copy WiFi `rtl8188fu.ko` module to camera `/lib/modules/4.9.37/extra/rtl8188fu.ko` via microSD card (camera should be [connected](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) to PC via USB-UART).
 
-3) Edit /etc/network/interfaces 
+3) Edit `/etc/network/interfaces` on camera: 
 
 ```
 # Interfaces
@@ -371,9 +371,9 @@ if you don't want to save changes and just want to exit `vi` editor then press `
 
 **Auto setup**
 
-1) Copy files to sd card
+1) Copy files to microSD card.
 
-2) Edit /etc/network/interfaces on sd card (don’t forget save file in UTF8 encoding , for example use Notepad++)
+2) Edit `autoconfig/etc/network/interfaces` file on microSD card (don’t forget save file in UTF8 encoding , for example use Notepad++):
 
 ```
 # Interfaces
@@ -397,6 +397,7 @@ post-down killall -q wpa_supplicant
 ```
 
 In this example default camera WiFi SSID for connection to router as client (not as access point): `OpenIPC_NFS` password: `project2021`
+
 You need to change values to yours accordingly.
 
 3) Turn off the camera.
