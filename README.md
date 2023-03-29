@@ -428,7 +428,8 @@ You need to change values to yours accordingly.
 
 ### Rolling back to factory firmware from backup
 
-1) Format microSD card.
+1) Connect the microSD card to the PC and divide it into two partitions. The card can be of any size, but the first partition must not exceed 2GB. 
+   Format the first partition of the microSD card as FAT/FAT16 (2GB limit). FAT stands for File Allocation Table.
 
 2) Copy fullflash file (`fullflash-CIP37210.bin`) to microSD card.
 
