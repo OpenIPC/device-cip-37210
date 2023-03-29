@@ -212,7 +212,7 @@ To enter OpenIPC U-boot console again hit Ctrl+C during message appear.
 
 ### Flashing OpenIPC kernel
 
-1) Download openipc.hi3518ev200-br.tgz file from: 
+1) Download openipc.hi3518ev200-nor-lite.tgz file from: 
  
                         https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-nor-lite.tgz
 
@@ -264,7 +264,7 @@ If not so, repeat from step 3.
 
 2) You must have a properly formatted microSD card (in the U-boot step)
 
-3) Download openipc.hi3518ev200-br.tgz file from:
+3) Download openipc.hi3518ev200-nor-lite.tgz file from:
 
                         https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-nor-lite.tgz
                         
