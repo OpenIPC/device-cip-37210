@@ -402,11 +402,9 @@ You need to change values to yours accordingly.
 
 3) Turn off the camera.
 
-4) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) the camera to the computer with the USB-UART adapter. 
+4) Insert prepared with files microSD card to the camera.
 
-5) Insert prepared microSD card to the camera.
-
-6) Power on a camera.
+5) Power on a camera.
 
 7) Wait until camera boot and check on your router web page connected camera and write somewhere obtained camera's IP address.
 
