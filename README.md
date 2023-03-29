@@ -13,7 +13,7 @@
 6)  [Flashing OpenIPC kernel](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-kernel)
 7)  [Flashing OpenIPC rootfs](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-rootfs)
 8)  [WiFi setup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#wifi-setup)
-9)  Settings
+9)  [Settings](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#settings)
 10)  Frequently asked questions
 11) Rolling back to factory firmware from backup
 
@@ -316,6 +316,94 @@ If not so, repeat from step 2.
 
 
 ### WiFi setup
+
+                                                        **Manual setup** 
+
+1) Download WiFi module and copy to microSD card
+
+2) Copy WiFi module to camera via sd /lib/modules/4.9.37/extra/rtl8188fu.ko   (camera should be connected to PC via USB-UART)
+
+3) Edit /etc/network/interfaces 
+
+```
+# Interfaces
+auto lo
+iface lo inet loopback
+auto wlan0
+iface wlan0 inet dhcp
+pre-up echo 3 > /sys/class/gpio/export
+pre-up echo out > /sys/class/gpio/gpio3/direction
+pre-up echo 1 > /sys/class/gpio/gpio3/value
+pre-up modprobe mac80211
+pre-up sleep 1
+pre-up insmod /lib/modules/4.9.37/extra/rtl8188fu.ko
+pre-up sleep 1
+pre-up wpa_passphrase "OpenIPC_NFS" "project2021" >/tmp/wpa_supplicant.conf
+pre-up sed -i '2i \\tscan_ssid=1' /tmp/wpa_supplicant.conf
+pre-up ifconfig wlan0 up
+pre-up wpa_supplicant -B -Dnl80211 -iwlan0 -c/tmp/wpa_supplicant.conf
+pre-up sleep 3
+post-down killall -q wpa_supplicant
+```
+
+In this example default camera WiFi SSID for connection to router as client (not as access point): OpenIPC_NFS password: project2021
+You need to change values to yours accordingly.
+For this purposes you can use vi editor.
+Short hints:
+after you have opened file `/etc/network/interfaces` via `vi` editor (`vi /etc/network/interfaces`) use `i` character on keyboard to switch to 'edit' mode
+then using arrows on keyboard to move the cursor to values names 
+
+make changes
+
+to save your changes to the file press `:` -> `w` -> `q` -> `enter`
+if you don't want to save changes and just want to exit `vi` editor then press `:` -> `q` -> `!` -> `enter`
+
+4) Reboot    
+
+5) Wait until camera boot and check on your router web page connected camera and write somewhere obtained camera's IP address.
+
+                                                       **Auto setup**
+1) Copy files to sd card
+
+2) Edit /etc/network/interfaces on sd card (don’t forget save file in UTF8 encoding , for example use Notepad++)
+
+```
+# Interfaces
+auto lo
+iface lo inet loopback
+auto wlan0
+iface wlan0 inet dhcp
+pre-up echo 3 > /sys/class/gpio/export
+pre-up echo out > /sys/class/gpio/gpio3/direction
+pre-up echo 1 > /sys/class/gpio/gpio3/value
+pre-up modprobe mac80211
+pre-up sleep 1
+pre-up insmod /lib/modules/4.9.37/extra/rtl8188fu.ko
+pre-up sleep 1
+pre-up wpa_passphrase "OpenIPC_NFS" "project2021" >/tmp/wpa_supplicant.conf
+pre-up sed -i '2i \\tscan_ssid=1' /tmp/wpa_supplicant.conf
+pre-up ifconfig wlan0 up
+pre-up wpa_supplicant -B -Dnl80211 -iwlan0 -c/tmp/wpa_supplicant.conf
+pre-up sleep 3
+post-down killall -q wpa_supplicant
+```
+
+In this example default camera WiFi SSID for connection to router as client (not as access point): `OpenIPC_NFS` password: `project2021`
+You need to change values to yours accordingly.
+
+3) Turn off the camera
+
+4) Insert prepared microSD card to the camera
+
+5) Power on a camera
+
+6) Wait until camera boot and check on your router web page connected camera and write somewhere obtained camera's IP address.
+
+7) Pull out microSD card.
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
+### Settings 
 
 More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
 <p align="center">
