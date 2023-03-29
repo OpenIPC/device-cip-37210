@@ -166,7 +166,7 @@ where:
 6) Load OpenIPC u-boot-hi3518ev200-universal.bin U-Boot with OpenIPC BURN utility to SoC RAM. 
     Video at https://youtu.be/er9K9XqkQgM
 7) From this step without a backup it will be impossible to restore the factory firmware!
-    Execute from PuTTY command line (OpenIPC U-boot command line):
+    Execute from PuTTY command line  in OpenIPC U-boot command line (line by line and not all together):
  
 `mw.b 0x82000000 ff 0x1000000`
 
@@ -223,7 +223,7 @@ extract archive and save uImage.hi3518ev200 (kernel) and rootfs.squashfs.hi3518e
 3) Power up your camera. From this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
 To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
 
-4)  Execute from OpenIPC U-boot command line (booted from the spi flash):
+4)  Execute from OpenIPC U-boot command line booted from the spi flash (line by line and not all together):
 
 `mw.b 0x82000000 ff 0x1000000`
 
@@ -275,7 +275,7 @@ extract archive and save rootfs.squashfs.hi3518ev200 (root file system) file to 
 5) Power up your camera. At this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
 To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
 
-6) Execute from OpenIPC U-boot command line (booted from the spi flash):
+6) Execute from OpenIPC U-boot command line booted from the spi flash (line by line and not all together):
 
 `mw.b 0x82000000 ff 0x1000000`
 
@@ -437,7 +437,7 @@ You need to change values to yours accordingly.
 
 4) Power on the camera.
 
-5) Enter OpenIPC U-boot console by hitting Ctrl+C during message appear.
+5) Enter OpenIPC U-boot console by hitting `Ctrl+C` during message appear.
 
 6) Execute from OpenIPC U-boot command line (line by line and not all together):
 
