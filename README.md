@@ -105,7 +105,7 @@ h) Read the content of the microSD card to the computer
                                                    Warning! 
 DO NOT IGNORE ANY OF THE STEPS! ALSO IT IS INADMISSIBLE TO HAVE ANY ERRORS DURING EXECUTION OF ACTIONS AND COMMANDS!
    
-1) Download windows dd utility (allows the flexible copying of data under in a win32 environment) 
+1) Download windows `dd` utility (allows the flexible copying of data under in a win32 environment) 
     http://www.chrysocome.net/dd direct link http://www.chrysocome.net/downloads/dd-0.6beta3.zip ( or download [here](https://github.com/OpenIPC/device-cip-37210/files/11105298/dd-0.6beta3.zip)) and extract it to appropriate location.
 
 2) Prepare microSD card: 
