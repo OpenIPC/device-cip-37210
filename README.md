@@ -9,9 +9,9 @@
 2)  [Connecting USB-UART adapter](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter)
 3)  [Partitions](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#partitions)
 4)  [Backup factory firmware](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#backup-factory-firmware)
-5)  Flashing OpenIPC U-Boot
-6)  Flashing OpenIPC kernel
-7)  Flashing OpenIPC rootfs
+5)  [Flashing OpenIPC U-Boot](https://github.com/OpenIPC/device-cip-37210/#flashing-openipc-u-boot)
+6)  [Flashing OpenIPC kernel](https://github.com/OpenIPC/device-cip-37210/#flashing-openipc-kernel)
+7)  [Flashing OpenIPC rootfs](https://github.com/OpenIPC/device-cip-37210/#flashing-openipc-rootfs)
 8)  WiFi setup
 9)  Settings
 10)  Frequently asked questions
@@ -116,8 +116,11 @@ This command clear head part of the microSD card with zeros, where `e` the lette
 5) Execute from PuTTY command line (green line by line and not all together) :
 
 `mw.b 0x82000000 ff 0x1000000`
+
 `sf probe 0`
+
 `sf read 0x82000000 0x0 0x1000000`
+
 `mmc write 0 0x82000000 0x10 0x8000`
 
 where:
@@ -140,7 +143,7 @@ where:
  Each dump is unique, because it contains unique camera id and keys. If you flash someone else's dump - it will be 
  a clone, which means that the two devices will not be able to work simultaneously in the application on the phone.
 
-[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 ### Flashing OpenIPC U-Boot
 
@@ -155,7 +158,23 @@ where:
 6) Load OpenIPC u-boot-hi3518ev200-universal.bin U-Boot with OpenIPC BURN utility to SoC RAM. 
     Video at https://youtu.be/er9K9XqkQgM
 7) From this step without a backup it will be impossible to restore the factory firmware!
-    Execute from PuTTY command line (OpenIPC U-boot command line):   
+    Execute from PuTTY command line (OpenIPC U-boot command line):
+ 
+`mw.b 0x82000000 ff 0x1000000`
+
+`fatls mmc 0`
+
+`fatload mmc 0 0x82000000 u-boot-hi3518ev200-universal.bin`
+
+`sf probe 0`
+
+`sf erase 0x0 0x50000`
+
+`sf write 0x82000000 0x0 ${filesize}`
+
+`reset`
+
+Where:
 `mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
 `fatls mmc 0` u-boot-hi3518ev200-universal.bin should appear in output
 `fatload mmc 0 0x82000000 u-boot-hi3518ev200-universal.bin` load u-boot-hi3518ev200-universal.bin file from microSD card to the SoC RAM starting from address 0x82000000
@@ -174,6 +193,8 @@ it will setup partion for 16 megabyte spi flash.
 Camera will reboot immediatly. 
 To enter OpenIPC U-boot console again hit Ctrl+C during message appear.
 
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
 ### Flashing OpenIPC kernel
 
 1) Download openipc.hi3518ev200-br.tgz file from: 
@@ -183,6 +204,20 @@ extract archive and save uImage.hi3518ev200 (kernel) and rootfs.squashfs.hi3518e
 3) Power up your camera. From this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
 To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
 4)  Execute from OpenIPC U-boot command line (booted from the spi flash):
+
+`mw.b 0x82000000 ff 0x1000000`
+
+`fatls mmc 0`
+
+`fatload mmc 0 0x82000000 uImage.hi3518ev200`
+
+`sf probe 0`
+
+`sf erase 0x50000 0x200000`
+
+`sf write 0x82000000 0x50000 ${filesize}`
+
+Where:
 `mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
 `fatls mmc 0` u-boot-hi3518ev200-universal.bin should appear in output
 `fatload mmc 0 0x82000000 uImage.hi3518ev200` load uImage.hi3518ev200 file from microSD card to the SoC RAM starting from address 0x82000000
@@ -193,6 +228,11 @@ To enter OpenIPC U-boot console hit Ctrl+C during message appear.
 No errors should appear! 
 
 If not so, repeat from step 3. 
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
+### Flashing OpenIPC rootfs
+
 
 
 More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
