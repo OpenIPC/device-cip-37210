@@ -336,14 +336,20 @@ If not so, repeat from step 2.
 
 **Manual setup** 
 
-1) Download, extract and copy WiFi `rtl8188fu.ko` module to microSD card.
+1) Download, extract and copy WiFi `rtl8188fu.ko` file to microSD card.
 
 [rtl8188fu.zip](https://github.com/OpenIPC/device-cip-37210/files/11104201/rtl8188fu.zip)
 
 
 2) Copy WiFi `rtl8188fu.ko` module to camera `/lib/modules/4.9.37/extra/rtl8188fu.ko` via microSD card (camera should be [connected](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) to PC via USB-UART).
 
-3) Edit `/etc/network/interfaces` on camera: 
+3) Download, extract and copy WiFi `rtl8188fufw.bin` module to microSD card.
+
+[rtl8188fufw.zip](https://github.com/OpenIPC/device-cip-37210/files/11105856/rtl8188fufw.zip)
+
+4) Copy WiFi `rtl8188fufw.bin` file to camera `/lib/firmware/rtlwifi/rtl8188fufw.bin` via microSD card (camera should be [connected](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) to PC via USB-UART).
+
+5) Edit `/etc/network/interfaces` on camera: 
 
 ```
 # Interfaces
@@ -382,9 +388,9 @@ make changes
 to save your changes to the file press `:` -> `w` -> `q` -> `enter`
 if you don't want to save changes and just want to exit `vi` editor then press `:` -> `q` -> `!` -> `enter`
 
-4) Reboot    
+6) Reboot    
 
-5) Wait until camera boot and check on your router web page connected camera and write somewhere obtained camera's IP address.
+7) Wait until camera boot and check on your router web page connected camera and write somewhere obtained camera's IP address.
 
 **Auto setup**
 
