@@ -317,7 +317,7 @@ If not so, repeat from step 2.
 
 ### WiFi setup
 
-                                                        **Manual setup** 
+**Manual setup** 
 
 1) Download WiFi module and copy to microSD card
 
@@ -346,7 +346,7 @@ pre-up sleep 3
 post-down killall -q wpa_supplicant
 ```
 
-In this example default camera WiFi SSID for connection to router as client (not as access point): OpenIPC_NFS password: project2021
+In this example default camera WiFi SSID for connection to router as client (not as access point): `OpenIPC_NFS` password: `project2021`
 You need to change values to yours accordingly.
 For this purposes you can use vi editor.
 Short hints:
@@ -362,7 +362,8 @@ if you don't want to save changes and just want to exit `vi` editor then press `
 
 5) Wait until camera boot and check on your router web page connected camera and write somewhere obtained camera's IP address.
 
-                                                       **Auto setup**
+**Auto setup**
+
 1) Copy files to sd card
 
 2) Edit /etc/network/interfaces on sd card (don’t forget save file in UTF8 encoding , for example use Notepad++)
