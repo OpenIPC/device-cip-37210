@@ -9,10 +9,10 @@
 2)  [Connecting USB-UART adapter](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter)
 3)  [Partitions](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#partitions)
 4)  [Backup factory firmware](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#backup-factory-firmware)
-5)  [Flashing OpenIPC U-Boot](https://github.com/OpenIPC/device-cip-37210/#flashing-openipc-u-boot)
-6)  [Flashing OpenIPC kernel](https://github.com/OpenIPC/device-cip-37210/#flashing-openipc-kernel)
-7)  [Flashing OpenIPC rootfs](https://github.com/OpenIPC/device-cip-37210/#flashing-openipc-rootfs)
-8)  WiFi setup
+5)  [Flashing OpenIPC U-Boot](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-u-boot)
+6)  [Flashing OpenIPC kernel](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-kernel)
+7)  [Flashing OpenIPC rootfs](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-rootfs)
+8)  [WiFi setup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#wifi-setup)
 9)  Settings
 10)  Frequently asked questions
 11) Rolling back to factory firmware from backup
@@ -175,12 +175,19 @@ where:
 `reset`
 
 Where:
+
 `mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+
 `fatls mmc 0` u-boot-hi3518ev200-universal.bin should appear in output
+
 `fatload mmc 0 0x82000000 u-boot-hi3518ev200-universal.bin` load u-boot-hi3518ev200-universal.bin file from microSD card to the SoC RAM starting from address 0x82000000
+
 `sf probe 0` select serial flash as current device
+
 `sf erase 0x0 0x50000` erase 0x50000 bytes from 0x0 address on the current selected serial flash
+
 `sf write 0x82000000 0x0 ${filesize}` write loaded file from 0x0 address till loaded file size to the current selected serial flash starting from address 0x82000000 in SoC RAM
+
 `reset` reboot camera
 
 No errors should appear! 
@@ -218,11 +225,17 @@ To enter OpenIPC U-boot console hit Ctrl+C during message appear.
 `sf write 0x82000000 0x50000 ${filesize}`
 
 Where:
+
 `mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+
 `fatls mmc 0` u-boot-hi3518ev200-universal.bin should appear in output
+
 `fatload mmc 0 0x82000000 uImage.hi3518ev200` load uImage.hi3518ev200 file from microSD card to the SoC RAM starting from address 0x82000000
+
 `sf probe 0` select serial flash as current device
+
 `sf erase 0x50000 0x200000` erase 0x200000 bytes from 0x50000 address on the current selected serial flash
+
 `sf write 0x82000000 0x50000 ${filesize}` write loaded file from 0x50000 address till loaded file size to the current selected serial flash starting from address 0x82000000 in SoC RAM
 
 No errors should appear! 
@@ -233,7 +246,56 @@ If not so, repeat from step 3.
 
 ### Flashing OpenIPC rootfs
 
+1) If you finish previous step and don't do anything else, then you can continue from step 6.
+    If for some reason you want to continue from powering up stage, then:
+2) You must have a properly formatted microSD card (in the U-boot step)
+3) Download openipc.hi3518ev200-br.tgz file from: 
+                        https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-br.tgz
+extract archive and save rootfs.squashfs.hi3518ev200 (root file system) file to the first partition of the microSD card.
+4) Insert microSD card into camera microSD card slot.
+5) Power up your camera. At this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
+To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
+6) Execute from OpenIPC U-boot command line (booted from the spi flash):
 
+`mw.b 0x82000000 ff 0x1000000`
+
+`fatls mmc 0`
+
+`fatload mmc 0 0x82000000 rootfs.squashfs.hi3518ev200`
+
+`sf probe 0`
+
+`sf erase 0x250000 0x500000`
+
+`sf write 0x82000000 0x250000 ${filesize}`
+
+`reset`
+
+Where:
+
+`mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+
+`fatls mmc 0` rootfs.squashfs.hi3518ev200 should appear in output
+
+`fatload mmc 0 0x82000000 rootfs.squashfs.hi3518ev200` load rootfs.squashfs.hi3518ev200 file from microSD card to the SoC RAM starting from address 0x82000000
+
+`sf probe 0` select serial flash as current device
+
+`sf erase 0x250000 0x500000` erase 0x500000 bytes from 0x250000 address on the current selected serial flash
+
+`sf write 0x82000000 0x250000 ${filesize}` write loaded file from 0x250000 address till loaded file size to the current selected serial flash starting from address 0x82000000 in SoC RAM
+
+`reset` reboot camera
+
+No errors should appear! 
+
+If not so, repeat from step 2.
+
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
+
+### WiFi setup
 
 More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
 <p align="center">
