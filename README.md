@@ -399,13 +399,13 @@ post-down killall -q wpa_supplicant
 In this example default camera WiFi SSID for connection to router as client (not as access point): `OpenIPC_NFS` password: `project2021`
 You need to change values to yours accordingly.
 
-3) Turn off the camera
+3) Turn off the camera.
 
 4) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) the camera to the computer with the USB-UART adapter. 
 
-5) Insert prepared microSD card to the camera
+5) Insert prepared microSD card to the camera.
 
-6) Power on a camera
+6) Power on a camera.
 
 7) Wait until camera boot and check on your router web page connected camera and write somewhere obtained camera's IP address.
 
@@ -431,7 +431,7 @@ You need to change values to yours accordingly.
 1) Connect the microSD card to the PC and divide it into two partitions. The card can be of any size, but the first partition must not exceed 2GB. 
    Format the first partition of the microSD card as FAT/FAT16 (2GB limit). FAT stands for File Allocation Table.
 
-2) Copy fullflash file (`fullflash-CIP37210.bin`) to microSD card.
+2) Copy fullflash file (`fullflash-CIP37210.bin`) to microSD card. It is assumed that you have made a backup as indicated in the beginning.
 
 3) Insert microSD card into camera microSD card slot.
 
@@ -476,6 +476,10 @@ No errors should appear!
 If not so, repeat from step `6` or you can do it from OpenIPC BURN utility same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microsd card before powering up).
 
 After this step the camera should boot from factory firmware.
+
+Each dump is unique, because it contains unique camera id and keys. If you flash someone else's dump - it will be 
+a clone, which means that the two devices will not be able to work simultaneously in the application on the phone.
+
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
