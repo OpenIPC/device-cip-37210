@@ -14,8 +14,8 @@
 7)  [Flashing OpenIPC rootfs](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-rootfs)
 8)  [WiFi setup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#wifi-setup)
 9)  [Settings](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#settings)
-10)  Frequently asked questions
-11) Rolling back to factory firmware from backup
+10) [Frequently asked questions](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#frequently-asked-questions)
+11) [Rolling back to factory firmware from backup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#rolling-back-to-factory-firmware-from-backup)
 
 
 
