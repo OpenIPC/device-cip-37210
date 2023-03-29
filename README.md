@@ -347,10 +347,14 @@ post-down killall -q wpa_supplicant
 ```
 
 In this example default camera WiFi SSID for connection to router as client (not as access point): `OpenIPC_NFS` password: `project2021`
+
 You need to change values to yours accordingly.
-For this purposes you can use vi editor.
+
+For this purposes you can use `vi` editor.
+
 Short hints:
-after you have opened file `/etc/network/interfaces` via `vi` editor (`vi /etc/network/interfaces`) use `i` character on keyboard to switch to 'edit' mode
+
+After you have opened file `/etc/network/interfaces` via `vi` editor (`vi /etc/network/interfaces`) use `i` character on keyboard to switch to 'edit' mode
 then using arrows on keyboard to move the cursor to values names 
 
 make changes
