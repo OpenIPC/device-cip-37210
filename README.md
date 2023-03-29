@@ -85,8 +85,117 @@ It is responsible for initializing the hardware and starting the operating syste
 
 ### Backup factory firmware
 
-More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
+a) Clear the space on the microSD card for the backup dump  
+b) Insert the prepared microSD card into the camera
+c) Connect the camera to the computer with the USB-UART adapter
+d) Read the content of spi flash to SoC RAM with OpenIPC U-Boot uploaded with OpenIPC BURN utility to camera
+e) Write the read out spi flash content from SoC RAM to the microSD card
+f) Take the microSD card from the camera and insert it into the computer
+g) Ignore the format proposal!
+h) Read the content of the microSD card to the computer
 
+                                                   Warning! 
+DO NOT IGNORE ANY OF THE STEPS! ALSO IT IS INADMISSIBLE TO HAVE ANY ERRORS DURING EXECUTION OF ACTIONS AND COMMANDS!
+   
+1) Download windows dd utility (allows the flexible copying of data under in a win32 environment) 
+    http://www.chrysocome.net/dd direct link http://www.chrysocome.net/downloads/dd-0.6beta3.zip
+    and extract it to appropriate location.
+2) Prepare microSD card: 
+    Connect microSD card to Windows PC. Check the letter of microSD card in windows file explorer.
+After next operation all previous information on microSD card will be lost!
+Open windows terminal window (`cmd`) and issue command:
+`dd if=/dev/zero of=\\.\e:  bs=512 count=65536 --progress`
+This command clear head part of the microSD card with zeros, where `e` the letter of microSD card in windows file explorer. Where `dd` - utility itself, `if` - input file (with zeros), `of` output file (microSD card), `bs` - block size (bytes), `count` - number of blocks. 
+ 512*65536=33554432 bytes=32 MegaBytes will be cleared from the begining of microSD.
+
+
+3) Insert prepared microSD card into camera microSD card slot.
+
+4) Load OpenIPC hi3518ev200 U-Boot with OpenIPC BURN utility. Video at https://youtu.be/er9K9XqkQgM
+
+5) Execute from PuTTY command line (green line by line and not all together) :
+
+`mw.b 0x82000000 ff 0x1000000`
+`sf probe 0`
+`sf read 0x82000000 0x0 0x1000000`
+`mmc write 0 0x82000000 0x10 0x8000`
+
+where:
+`mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+`sf probe 0` select serial flash as current device
+`sf read 0x82000000 0x0 0x1000000` reading whole amount of data from spi flash memory chip into SoC RAM
+`mmc write 0 0x82000000 0x10 0x8000` save the copied data from SoC RAM to the microSD card. The data will be written directly to the microSD card registers, bypassing the partition table. To avoid conflicts when later accessing the card data from the PC, you must make an offset of 8 kilobytes from the beginning of the card (8 * 1024 = 8192 bytes or 16 blocks of 512 bytes, or 0x10 blocks in hexadecimal representation).
+
+6) Save from microSD card to HDD:
+    Take the microSD card from the camera and insert it into the Windows PC.
+    Ignore the format question after insertion!!!
+    Open windows terminal window (cmd) and issue command:
+
+      `dd if=\\.\e: of=CIP37210-fullflash.bin  bs=512 skip=16 count=32768 --progress`
+
+   The size of the `CIP37210-fullflash.bin` file should be 16777216 bytes = 16 MegaBytes. 
+   If not so, repeat from step 2.
+   Save CIP37210-fullflash.bin file to safe place.
+ 
+ Each dump is unique, because it contains unique camera id and keys. If you flash someone else's dump - it will be 
+ a clone, which means that the two devices will not be able to work simultaneously in the application on the phone.
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#
+
+### Flashing OpenIPC U-Boot
+
+1) Connect the microSD card to the PC and divide it into two partitions. The card can be of any size, but the first partition must not exceed 2GB. 
+   Format the first partition of the microSD card as FAT/FAT16 (2GB limit). FAT stands for File Allocation Table.
+2) Download u-boot-hi3518ev200-universal.bin and copy file to the first partition of the microSD card:
+        https://github.com/OpenIPC/firmware/releases/download/latest/u-boot-hi3518ev200-universal.bin
+3) Insert microSD card in to camera microSD card slot.
+4) Connect the camera to the computer with the USB-UART adapter.
+5) Insert prepared microSD card (with `u-boot-hi3518ev200-universal.bin`) into camera microSD card slot.
+    If not inserted before powering up the camera then card will not appear even after mmc rescan.
+6) Load OpenIPC u-boot-hi3518ev200-universal.bin U-Boot with OpenIPC BURN utility to SoC RAM. 
+    Video at https://youtu.be/er9K9XqkQgM
+7) From this step without a backup it will be impossible to restore the factory firmware!
+    Execute from PuTTY command line (OpenIPC U-boot command line):   
+`mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+`fatls mmc 0` u-boot-hi3518ev200-universal.bin should appear in output
+`fatload mmc 0 0x82000000 u-boot-hi3518ev200-universal.bin` load u-boot-hi3518ev200-universal.bin file from microSD card to the SoC RAM starting from address 0x82000000
+`sf probe 0` select serial flash as current device
+`sf erase 0x0 0x50000` erase 0x50000 bytes from 0x0 address on the current selected serial flash
+`sf write 0x82000000 0x0 ${filesize}` write loaded file from 0x0 address till loaded file size to the current selected serial flash starting from address 0x82000000 in SoC RAM
+`reset` reboot camera
+
+No errors should appear! 
+If not so, repeat from step 6. 
+After this step the camera should boot from the spi flash with OpenIPC U-Boot. 
+To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
+Issue command:
+`run setnor16m`
+it will setup partion for 16 megabyte spi flash.
+Camera will reboot immediatly. 
+To enter OpenIPC U-boot console again hit Ctrl+C during message appear.
+
+### Flashing OpenIPC kernel
+
+1) Download openipc.hi3518ev200-br.tgz file from: 
+                        https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-br.tgz
+extract archive and save uImage.hi3518ev200 (kernel) and rootfs.squashfs.hi3518ev200 (root file system) files to the first partition of the microSD card.
+2) Insert microSD card into camera microSD card slot.
+3) Power up your camera. From this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
+To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
+4)  Execute from OpenIPC U-boot command line (booted from the spi flash):
+`mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+`fatls mmc 0` u-boot-hi3518ev200-universal.bin should appear in output
+`fatload mmc 0 0x82000000 uImage.hi3518ev200` load uImage.hi3518ev200 file from microSD card to the SoC RAM starting from address 0x82000000
+`sf probe 0` select serial flash as current device
+`sf erase 0x50000 0x200000` erase 0x200000 bytes from 0x50000 address on the current selected serial flash
+`sf write 0x82000000 0x50000 ${filesize}` write loaded file from 0x50000 address till loaded file size to the current selected serial flash starting from address 0x82000000 in SoC RAM
+
+No errors should appear! 
+
+If not so, repeat from step 3. 
+
+
+More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
 <p align="center">
 <a href="https://opencollective.com/openipc/contribute/backer-14335/checkout" target="_blank"><img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width="250" alt="Open Collective donate button"></a>
 </p>
