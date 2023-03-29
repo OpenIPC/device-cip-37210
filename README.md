@@ -321,6 +321,9 @@ If not so, repeat from step 2.
 
 1) Download WiFi module and copy to microSD card
 
+[rtl8188fu.zip](https://github.com/OpenIPC/device-cip-37210/files/11104201/rtl8188fu.zip)
+
+
 2) Copy WiFi module to camera `/lib/modules/4.9.37/extra/rtl8188fu.ko` via microsd card (camera should be [connected](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) to PC via USB-UART)
 
 3) Edit /etc/network/interfaces 
