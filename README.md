@@ -209,11 +209,16 @@ To enter OpenIPC U-boot console again hit Ctrl+C during message appear.
 ### Flashing OpenIPC kernel
 
 1) Download openipc.hi3518ev200-br.tgz file from: 
+ 
                         https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-nor-lite.tgz
+
 extract archive and save uImage.hi3518ev200 (kernel) and rootfs.squashfs.hi3518ev200 (root file system) files to the first partition of the microSD card.
+
 2) Insert microSD card into camera microSD card slot.
+
 3) Power up your camera. From this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
 To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
+
 4)  Execute from OpenIPC U-boot command line (booted from the spi flash):
 
 `mw.b 0x82000000 ff 0x1000000`
@@ -252,15 +257,20 @@ If not so, repeat from step 3.
 
 1) If you finish previous step and don't do anything else, then you can continue from step 6.
     If for some reason you want to continue from powering up stage, then:
+
 2) You must have a properly formatted microSD card (in the U-boot step)
+
 3) Download openipc.hi3518ev200-br.tgz file from:
 
                         https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-nor-lite.tgz
                         
 extract archive and save rootfs.squashfs.hi3518ev200 (root file system) file to the first partition of the microSD card.
+
 4) Insert microSD card into camera microSD card slot.
+
 5) Power up your camera. At this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
 To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
+
 6) Execute from OpenIPC U-boot command line (booted from the spi flash):
 
 `mw.b 0x82000000 ff 0x1000000`
