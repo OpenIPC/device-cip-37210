@@ -102,9 +102,13 @@ DO NOT IGNORE ANY OF THE STEPS! ALSO IT IS INADMISSIBLE TO HAVE ANY ERRORS DURIN
     and extract it to appropriate location.
 2) Prepare microSD card: 
     Connect microSD card to Windows PC. Check the letter of microSD card in windows file explorer.
+    
 After next operation all previous information on microSD card will be lost!
+
 Open windows terminal window (`cmd`) and issue command:
+
 `dd if=/dev/zero of=\\.\e:  bs=512 count=65536 --progress`
+
 This command clear head part of the microSD card with zeros, where `e` the letter of microSD card in windows file explorer. Where `dd` - utility itself, `if` - input file (with zeros), `of` output file (microSD card), `bs` - block size (bytes), `count` - number of blocks. 
  512*65536=33554432 bytes=32 MegaBytes will be cleared from the begining of microSD.
 
@@ -113,7 +117,7 @@ This command clear head part of the microSD card with zeros, where `e` the lette
 
 4) Load OpenIPC hi3518ev200 U-Boot with OpenIPC BURN utility. Video at https://youtu.be/er9K9XqkQgM
 
-5) Execute from PuTTY command line (green line by line and not all together) :
+5) Execute from PuTTY command line (line by line and not all together) :
 
 `mw.b 0x82000000 ff 0x1000000`
 
