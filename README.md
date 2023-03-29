@@ -171,7 +171,7 @@ where:
 4) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) the camera to the computer with the USB-UART adapter.
 5) Insert prepared microSD card (with `u-boot-hi3518ev200-universal.bin` file) into camera microSD card slot.
     If not inserted before powering up the camera then card will not appear even after `mmc rescan`.
-6) Load OpenIPC u-boot-hi3518ev200-universal.bin U-Boot with OpenIPC BURN utility to SoC RAM. 
+6) Load OpenIPC `u-boot-hi3518ev200-universal.bin` U-Boot with OpenIPC BURN utility to SoC RAM. 
     Video at https://youtu.be/er9K9XqkQgM
 7) From this step without a backup it will be impossible to restore the factory firmware!
     Execute from PuTTY command line  in OpenIPC U-boot command line (line by line and not all together):
