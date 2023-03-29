@@ -124,9 +124,13 @@ This command clear head part of the microSD card with zeros, where `e` the lette
 `mmc write 0 0x82000000 0x10 0x8000`
 
 where:
+
 `mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+
 `sf probe 0` select serial flash as current device
+
 `sf read 0x82000000 0x0 0x1000000` reading whole amount of data from spi flash memory chip into SoC RAM
+
 `mmc write 0 0x82000000 0x10 0x8000` save the copied data from SoC RAM to the microSD card. The data will be written directly to the microSD card registers, bypassing the partition table. To avoid conflicts when later accessing the card data from the PC, you must make an offset of 8 kilobytes from the beginning of the card (8 * 1024 = 8192 bytes or 16 blocks of 512 bytes, or 0x10 blocks in hexadecimal representation).
 
 6) Save from microSD card to HDD:
@@ -205,7 +209,7 @@ To enter OpenIPC U-boot console again hit Ctrl+C during message appear.
 ### Flashing OpenIPC kernel
 
 1) Download openipc.hi3518ev200-br.tgz file from: 
-                        https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-br.tgz
+                        https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-nor-lite.tgz
 extract archive and save uImage.hi3518ev200 (kernel) and rootfs.squashfs.hi3518ev200 (root file system) files to the first partition of the microSD card.
 2) Insert microSD card into camera microSD card slot.
 3) Power up your camera. From this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
@@ -249,8 +253,10 @@ If not so, repeat from step 3.
 1) If you finish previous step and don't do anything else, then you can continue from step 6.
     If for some reason you want to continue from powering up stage, then:
 2) You must have a properly formatted microSD card (in the U-boot step)
-3) Download openipc.hi3518ev200-br.tgz file from: 
-                        https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-br.tgz
+3) Download openipc.hi3518ev200-br.tgz file from:
+
+                        https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-nor-lite.tgz
+                        
 extract archive and save rootfs.squashfs.hi3518ev200 (root file system) file to the first partition of the microSD card.
 4) Insert microSD card into camera microSD card slot.
 5) Power up your camera. At this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
