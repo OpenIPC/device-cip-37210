@@ -388,7 +388,8 @@ if you don't want to save changes and just want to exit `vi` editor then press `
 
 **Auto setup**
 
-1) Copy files to microSD card.
+1) Download, extract and copy [autoconfig.zip](https://github.com/OpenIPC/device-cip-37210/files/11105817/autoconfig.zip) folder to the root of
+microSD card.
 
 2) Edit `autoconfig/etc/network/interfaces` file on microSD card (don’t forget save file in UTF8 encoding , for example use Notepad++):
 
