@@ -165,7 +165,7 @@ where:
 
 1) Connect the microSD card to the PC and divide it into two partitions. The card can be of any size, but the first partition must not exceed 2GB. 
    Format the first partition of the microSD card as FAT/FAT16 (2GB limit). FAT stands for File Allocation Table.
-2) Download u-boot-hi3518ev200-universal.bin and copy file to the first partition of the microSD card:
+2) Download `u-boot-hi3518ev200-universal.bin` and copy this file to the first partition of the microSD card:
         https://github.com/OpenIPC/firmware/releases/download/latest/u-boot-hi3518ev200-universal.bin
 3) Insert microSD card in to camera microSD card slot.
 4) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) the camera to the computer with the USB-UART adapter.
