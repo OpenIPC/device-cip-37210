@@ -411,7 +411,72 @@ You need to change values to yours accordingly.
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Settings 
+### Settings
+
+
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
+### Frequently asked questions
+
+
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
+
+### Rolling back to factory firmware from backup
+
+1) Format microSD card.
+
+2) Copy fullflash file (`fullflash-CIP37210.bin`) to microSD card.
+
+3) Insert microSD card into camera microSD card slot.
+
+4) Power on the camera.
+
+5) Enter OpenIPC U-boot console by hitting Ctrl+C during message appear.
+
+6) Execute from OpenIPC U-boot command line (line by line and not all together):
+
+`mw.b 0x82000000 ff 0x1000000`
+
+`fatls mmc 0`
+
+`fatload mmc 0 0x82000000 fullflash-CIP37210.bin`
+
+`sf probe 0` 
+
+`sf erase 0x0 0x1000000`
+
+`sf write 0x82000000 0x0 ${filesize}`
+
+`reset`
+
+Where:
+
+`mw.b 0x82000000 ff 0x1000000` clear a section of SoC RAM 0x1000000 (hex) bytes for a 16MB chip with starting address 0x82000000 with FF
+
+`fatls mmc 0` fullflash-CIP37210.bin should appear in output
+
+`fatload mmc 0 0x82000000 fullflash-CIP37210.bin` load `fullflash-CIP37210.bin` file from microSD card to the SoC RAM starting from address 0x82000000
+
+`sf probe 0` select serial flash as current device
+
+`sf erase 0x0 0x1000000` erase 0x1000000 bytes from 0x0 address on the current selected serial flash (whole 16MB spi flash)
+
+`sf write 0x82000000 0x0 ${filesize}` write loaded file from 0x0 address till loaded file size to the current selected serial flash starting from address 0x82000000 in SoC RAM
+
+`reset` reboot camera
+
+No errors should appear! 
+
+If not so, repeat from step `6` or you can do it from OpenIPC BURN utility same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microsd card before powering up).
+
+After this step the camera should boot from factory firmware.
+
+[Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
+
+
 
 More information about the [project][project] is available in our [website][website] and on the [wiki][wiki].
 <p align="center">
