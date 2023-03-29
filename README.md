@@ -148,7 +148,7 @@ where:
 6) Save from microSD card to HDD:
     Take the microSD card from the camera and insert it into the Windows PC.
     Ignore the format question after insertion!!!
-    Open windows terminal window (cmd) and issue command:
+    Open windows terminal window (`cmd`) and issue command:
 
       `dd if=\\.\e: of=CIP37210-fullflash.bin  bs=512 skip=16 count=32768 --progress`
 
