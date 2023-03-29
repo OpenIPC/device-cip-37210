@@ -100,6 +100,8 @@ DO NOT IGNORE ANY OF THE STEPS! ALSO IT IS INADMISSIBLE TO HAVE ANY ERRORS DURIN
 1) Download windows dd utility (allows the flexible copying of data under in a win32 environment) 
     http://www.chrysocome.net/dd direct link http://www.chrysocome.net/downloads/dd-0.6beta3.zip
     and extract it to appropriate location.
+    or [dd-0.6beta3.zip](https://github.com/OpenIPC/device-cip-37210/files/11105298/dd-0.6beta3.zip)
+
 2) Prepare microSD card: 
     Connect microSD card to Windows PC. Check the letter of microSD card in windows file explorer.
     
