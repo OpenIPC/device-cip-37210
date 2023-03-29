@@ -319,7 +319,7 @@ If not so, repeat from step 2.
 
 **Manual setup** 
 
-1) Download WiFi module and copy to microSD card
+1) Download, extract and copy WiFi module to microSD card
 
 [rtl8188fu.zip](https://github.com/OpenIPC/device-cip-37210/files/11104201/rtl8188fu.zip)
 
