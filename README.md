@@ -483,6 +483,24 @@ In the Firmware/Firmware section, follow the steps given in the prompts.
 
 DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINISHED!
 
+**How to flip image upside down?**
+1) You need to switch the ISP to online mode, because this operation consumes too much memory.
+```
+/usr/bin/load_hisilicon
+
+-b_arg_online=1
++b_arg_online=0
+```
+and then
+```
+/etc/majestic.yaml
+
+ image:
+-  mirror: false
+-  flip: false
++  mirror: true
++  flip: true
+```
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
