@@ -50,7 +50,7 @@ https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
 
 
 
-### Connecting USB-UART adapter 
+## Connecting USB-UART adapter 
 
 Open the camera:
 
@@ -71,7 +71,7 @@ https://user-images.githubusercontent.com/1933140/228871373-fedda60f-3a15-43d6-a
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Partitions 
+## Partitions 
 CIP-37210 16mb SPI flash partitions table for OpenIPC
 |  | Decimal size mega bytes | Decimal size kilo bytes | Decimal size  bytes | Hexadecimal size bytes | Hexadecimal start address | Hexadecimal end address |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -96,7 +96,7 @@ It is responsible for initializing the hardware and starting the operating syste
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Backup factory firmware
+## Backup factory firmware
 
 a) Clear the space on the microSD card for the backup dump
 
@@ -173,7 +173,7 @@ where:
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Flashing OpenIPC U-Boot
+## Flashing OpenIPC U-Boot
 
 1) Connect the microSD card to the PC and divide it into two partitions. The card can be of any size, but the first partition must not exceed 2GB. 
    Format the first partition of the microSD card as FAT/FAT16 (2GB limit). FAT stands for File Allocation Table.
@@ -240,7 +240,7 @@ To enter OpenIPC U-boot console again hit Ctrl+C during message appear.
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Flashing OpenIPC kernel
+## Flashing OpenIPC kernel
 
 1) Download openipc.hi3518ev200-nor-lite.tgz file from: 
  
@@ -287,7 +287,7 @@ If not so, repeat from step 3.
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Flashing OpenIPC rootfs
+## Flashing OpenIPC rootfs
 
 1) If you finish previous step and don't do anything else, then you can continue from step 6.
     If for some reason you want to continue from powering up stage, then:
@@ -345,7 +345,7 @@ If not so, repeat from step 2.
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 
-### WiFi setup
+## WiFi setup
 
 **Manual setup** 
 
@@ -449,13 +449,13 @@ You need to change values to yours accordingly.
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Settings
+## Settings
 
 
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
-### Frequently asked questions
+## Frequently asked questions
 
 **Restore the settings** 
 
@@ -506,7 +506,7 @@ DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINI
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 
-### Rolling back to factory firmware from backup
+## Rolling back to factory firmware from backup
 
 1) Connect the microSD card to the PC and divide it into two partitions. The card can be of any size, but the first partition must not exceed 2GB. 
    Format the first partition of the microSD card as FAT/FAT16 (2GB limit). FAT stands for File Allocation Table.
