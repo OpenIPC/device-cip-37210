@@ -54,12 +54,12 @@ https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
 
 Open the camera:
 
-
-
 https://user-images.githubusercontent.com/1933140/228862478-eafe0b8b-65b3-48ac-a0b9-57054da8e2b3.mp4
 
 
+
 Сonnect the USB-UART adapter to the camera according to the circuit diagram:
+
 
 ![07-USB-UART](https://user-images.githubusercontent.com/1933140/228344385-f16179a3-aabb-4d56-9070-aac4da2129b6.png)
 
