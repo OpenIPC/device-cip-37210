@@ -18,7 +18,7 @@
 11) [Rolling back to factory firmware from backup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#rolling-back-to-factory-firmware-from-backup)
 
 
-
+---
 ### Requirements
 
 1) WiFi IP Camera Smartwares CIP-37210 with SoC HiSilicon 3518EV200 version (not with SoC Ingenic T21). 
@@ -294,7 +294,7 @@ If not so, repeat from step 3.
 
 2) You must have a properly formatted microSD card (in the U-boot step)
 
-3) Download openipc.hi3518ev200-nor-lite.tgz file from:
+3) Download `openipc.hi3518ev200-nor-lite.tgz` file from:
 
                         https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3518ev200-nor-lite.tgz
                         
@@ -410,7 +410,7 @@ if you don't want to save changes and just want to exit `vi` editor then press `
 1) Download, extract and copy [autoconfig.zip](https://github.com/OpenIPC/device-cip-37210/files/11105817/autoconfig.zip) folder to the root of
 microSD card.
 
-2) Edit `autoconfig/etc/network/interfaces` file on microSD card (don’t forget save file in UTF8 encoding , for example use Notepad++):
+2) Edit `autoconfig/etc/network/interfaces` file on microSD card (don’t forget save file in UTF8 encoding , for example use [Notepad++](https://notepad-plus-plus.org/)):
 
 ```
 # Interfaces
