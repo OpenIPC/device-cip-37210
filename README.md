@@ -18,7 +18,7 @@
 11) [Rolling back to factory firmware from backup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#rolling-back-to-factory-firmware-from-backup)
 
 
-----
+-----
 
 ### Requirements
 
