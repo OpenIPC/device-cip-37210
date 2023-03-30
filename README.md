@@ -292,7 +292,7 @@ If not so, repeat from step 3.
 1) If you finish previous step and don't do anything else, then you can continue from step 6.
     If for some reason you want to continue from powering up stage, then:
 
-2) You must have a properly formatted microSD card (in the U-boot step)
+2) You must have a properly formatted microSD card (in the [U-boot step](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-u-boot))
 
 3) Download `openipc.hi3518ev200-nor-lite.tgz` file from:
 
@@ -302,7 +302,7 @@ extract archive and save rootfs.squashfs.hi3518ev200 (root file system) file to 
 
 4) Insert microSD card into camera microSD card slot.
 
-5) Power up your camera. At this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash (U-boot step).
+5) Power up your camera. At this moment you should be able to boot from the spi flash OpenIPC U-Boot (without BURN utility). If not so, you should correctly re/flash OpenIPC U-Boot to the spi flash ([U-boot step](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#flashing-openipc-u-boot)).
 To enter OpenIPC U-boot console hit Ctrl+C during message appear. 
 
 6) Execute from OpenIPC U-boot command line booted from the spi flash (line by line and not all together):
@@ -555,7 +555,7 @@ Where:
 
 No errors should appear! 
 
-If not so, repeat from step `6` or you can do it from [OpenIPC BURN utility](https://github.com/OpenIPC/burn) same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microSD card before powering up).
+If not so, repeat from step `6` or you can do it from [OpenIPC BURN utility](https://github.com/OpenIPC/burn) same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microSD card and microSD card should be inserted into camera microSD card slot before powering up; if microSD card not inserted into camera microSD card slot before powering up the camera then card will not appear even after `mmc rescan`).
 
 After this step the camera should boot from factory firmware.
 
