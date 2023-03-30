@@ -491,7 +491,7 @@ DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINI
 -b_arg_online=1
 +b_arg_online=0
 ```
-and then
+2)
 ```
 /etc/majestic.yaml
 
@@ -501,6 +501,7 @@ and then
 +  mirror: true
 +  flip: true
 ```
+3) Reboot the camera
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
