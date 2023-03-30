@@ -444,6 +444,31 @@ You need to change values to yours accordingly.
 
 ### Frequently asked questions
 
+**Restore the settings** 
+
+It is enough to write the [autoconfig](https://github.com/OpenIPC/device-cip-37210/files/11105817/autoconfig.zip) folder to the root of the microSD card, insert it in the turned off camera microSD slot and turn on the power.
+
+**How to know what IP address of the camera and how to access it?**
+
+If the configuration file contains the correct Wi-Fi interface settings (SSID and key of your Access Point), you can find the IP address of the camera on your router in the list of connected devices marked as "OpenIPC". The control interface of the camera is available in the browser on port `85` and the SSH access is available on the standard port `22` using the `root` login, without a password the first time you connect.
+
+**How can I upgrade the firmware to the latest version via SSH?**
+
+Log in to the camera via SSH with the program `PuTTY` (login root, without password, the first connection or with the password you set in the WEB, port 22) and run the command:
+`sysupgrade -k -r`
+If you have internet, the camera will automatically connect to GitHub and download and install the latest updates.
+
+**How do I update the firmware to the latest version through the WEB?**
+
+Use your web browser to go to the camera with the IP address of the camera and the connection port `85`, for example like this: `http://192.168.1.10:85`
+
+Enter the default login and password (login `admin`, password `12345`). 
+
+After logging in to the camera, set a new password (don't forget to write it down!). 
+
+In the Firmware/Firmware section, follow the steps given in the prompts.
+
+DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINISHED!
 
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
