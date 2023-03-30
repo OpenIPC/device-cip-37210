@@ -63,6 +63,12 @@ https://user-images.githubusercontent.com/1933140/228862478-eafe0b8b-65b3-48ac-a
 
 ![07-USB-UART](https://user-images.githubusercontent.com/1933140/228344385-f16179a3-aabb-4d56-9070-aac4da2129b6.png)
 
+
+
+https://user-images.githubusercontent.com/1933140/228871373-fedda60f-3a15-43d6-ad3c-cd15a85213cc.mp4
+
+
+
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 ### Partitions 
