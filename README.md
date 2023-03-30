@@ -17,10 +17,8 @@
 10) [Frequently asked questions](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#frequently-asked-questions)
 11) [Rolling back to factory firmware from backup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#rolling-back-to-factory-firmware-from-backup)
 
-
--------
-
 ### Requirements
+--------------
 
 1) WiFi IP Camera Smartwares CIP-37210 with SoC HiSilicon 3518EV200 version (not with SoC Ingenic T21). 
    At the moment there are known of the existence of three modifications of the camera with this name.
@@ -50,7 +48,7 @@ https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
--------
+
 
 ### Connecting USB-UART adapter 
 
