@@ -19,6 +19,7 @@
 
 
 ---
+
 ### Requirements
 
 1) WiFi IP Camera Smartwares CIP-37210 with SoC HiSilicon 3518EV200 version (not with SoC Ingenic T21). 
