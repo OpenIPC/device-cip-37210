@@ -451,6 +451,85 @@ You need to change values to yours accordingly.
 
 ## Settings
 
+For the most stable operation of the device it is recommended to disable additional services: HLS, OSD, Motion and RTSP sub-stream.
+
+Majestic configuration file sample:
+
+```
+system:
+  buffer: 1024
+  staticDir: /var/www/majestic
+isp:
+  blkCnt: 5
+image:
+  mirror: false
+  flip: false
+  rotate: none
+  contrast: 50
+  hue: 50
+  saturation: 50
+  luminance: 50
+osd:
+  enabled: false
+  template: "OpenIPC v.2.3 | %F %T %Z"
+nightMode:
+  enabled: true
+  irSensorPin: 62
+  irSensorPinInvert: true
+  irCutPin1: 64
+  backlightPin: 63
+  dncDelay: 30
+  nightAPI: true
+records:
+  enabled: false
+  path: /mnt/mmcblk0p1/%Y/%m/%d/%H/%M.mp4
+  maxUsage: 95
+video0:
+  enabled: true
+  fps: 20
+  codec: h264
+video1:
+  enabled: false
+jpeg:
+  enabled: true
+mjpeg:
+  size: 640x360
+  fps: 5
+  bitrate: 2048
+audio:
+  enabled: true
+  volume: 70
+  srate: 8000
+  codec: alaw
+  outputEnabled: true
+  speakerPin: 51
+  speakerPinInvert: true
+rtsp:
+  enabled: true
+  port: 554
+hls:
+  enabled: false
+youtube:
+  enabled: false
+motionDetect:
+  enabled: false
+  visualize: true
+  debug: true
+ipeye:
+  enabled: false
+netip:
+  enabled: true
+  user: admin
+  password: 6V0Y4HLF
+  port: 34567
+  snapshots: true
+  ignoreSetTime: false
+onvif:
+  enabled: true
+watchdog:
+  enabled: true
+  timeout: 30
+```
 
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
