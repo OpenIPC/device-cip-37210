@@ -136,7 +136,7 @@ This command clear head part of the microSD card with zeros, where `e` the lette
 
 3) Insert prepared microSD card into camera microSD card slot.
 
-4) Load OpenIPC hi3518ev200 U-Boot with [OpenIPC BURN utility](https://github.com/OpenIPC/burn). Videos [here](https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw).
+4) Load OpenIPC hi3518ev200 U-Boot with [OpenIPC BURN utility](https://github.com/OpenIPC/burn) into SoC RAM. Videos [here](https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw).
 5) Execute from PuTTY command line (line by line and not all together) :
 
 `mw.b 0x82000000 ff 0x1000000`
