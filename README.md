@@ -454,7 +454,7 @@ If the configuration file contains the correct Wi-Fi interface settings (SSID an
 
 **How can I upgrade the firmware to the latest version via SSH?**
 
-Log in to the camera via SSH with the program `PuTTY` (login root, without password, the first connection or with the password you set in the WEB, port 22) and run the command:
+Log in to the camera via SSH with the program `PuTTY` (login `root`, without password, the first connection or with the password you set in the WEB, port `22`) and run the command:
 `sysupgrade -k -r`
 If you have internet, the camera will automatically connect to GitHub and download and install the latest updates.
 
