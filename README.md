@@ -104,7 +104,7 @@ b) Insert the prepared microSD card into the camera
 
 c) Connect the camera to the computer with the USB-UART adapter
 
-d) Read the content of spi flash to SoC RAM with OpenIPC U-Boot uploaded with OpenIPC BURN utility to camera
+d) Read the content of spi flash to SoC RAM with OpenIPC U-Boot uploaded with [OpenIPC BURN utility](https://github.com/OpenIPC/burn) to camera
 
 e) Write the read out spi flash content from SoC RAM to the microSD card
 
@@ -136,8 +136,7 @@ This command clear head part of the microSD card with zeros, where `e` the lette
 
 3) Insert prepared microSD card into camera microSD card slot.
 
-4) Load OpenIPC hi3518ev200 U-Boot with OpenIPC BURN utility. Video at https://youtu.be/er9K9XqkQgM
-
+4) Load OpenIPC hi3518ev200 U-Boot with [OpenIPC BURN utility](https://github.com/OpenIPC/burn). Videos [here](https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw).
 5) Execute from PuTTY command line (line by line and not all together) :
 
 `mw.b 0x82000000 ff 0x1000000`
@@ -184,8 +183,9 @@ where:
 4) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) the camera to the computer with the USB-UART adapter.
 5) Insert prepared microSD card (with `u-boot-hi3518ev200-universal.bin` file) into camera microSD card slot.
     If not inserted before powering up the camera then card will not appear even after `mmc rescan`.
-6) Load OpenIPC `u-boot-hi3518ev200-universal.bin` U-Boot with OpenIPC BURN utility to SoC RAM. 
-    Video at https://youtu.be/er9K9XqkQgM
+6) Load OpenIPC `u-boot-hi3518ev200-universal.bin` U-Boot with [OpenIPC BURN utility](https://github.com/OpenIPC/burn) to SoC RAM. 
+    Videos [here](https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw).
+    
 7) **From this step without a backup it will be impossible to restore the factory firmware!**
 
     Execute from PuTTY command line  in OpenIPC U-boot command line (line by line and not all together):
@@ -439,7 +439,7 @@ You need to change values to yours accordingly.
 
 3) Turn off the camera.
 
-4) Insert prepared with files microSD card to the camera.
+4) Insert prepared with files microSD card into the camera.
 
 5) Power on a camera.
 
@@ -494,13 +494,15 @@ DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINI
 
 2) Copy fullflash file (`fullflash-CIP37210.bin`) to microSD card. It is assumed that you have made a backup as indicated in the beginning.
 
-3) Insert microSD card into camera microSD card slot.
+3) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) camera to PC via USB-UART. 
 
-4) Power on the camera.
+4) Insert microSD card with `fullflash-CIP37210.bin` file into camera microSD card slot.
 
-5) Enter OpenIPC U-boot console by hitting `Ctrl+C` during message appear.
+5) Power on the camera.
 
-6) Execute from OpenIPC U-boot command line (line by line and not all together):
+6) Enter OpenIPC U-boot console by hitting `Ctrl+C` during message appear.
+
+7) Execute from OpenIPC U-boot command line (line by line and not all together):
 
 `mw.b 0x82000000 ff 0x1000000`
 
@@ -534,7 +536,7 @@ Where:
 
 No errors should appear! 
 
-If not so, repeat from step `6` or you can do it from OpenIPC BURN utility same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microSD card before powering up).
+If not so, repeat from step `6` or you can do it from [OpenIPC BURN utility](https://github.com/OpenIPC/burn) same way (in this case backup  `fullflash-CIP37210.bin` file should already exist on microSD card before powering up).
 
 After this step the camera should boot from factory firmware.
 
