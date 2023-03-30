@@ -511,7 +511,7 @@ DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINI
 1) Connect the microSD card to the PC and divide it into two partitions. The card can be of any size, but the first partition must not exceed 2GB. 
    Format the first partition of the microSD card as FAT/FAT16 (2GB limit). FAT stands for File Allocation Table.
 
-2) Copy fullflash file (`fullflash-CIP37210.bin`) to microSD card. It is assumed that you have made a backup as indicated in the beginning.
+2) Copy fullflash file (`fullflash-CIP37210.bin`) to microSD card. It is assumed that [you have made a backup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#backup-factory-firmware) as indicated in the beginning.
 
 3) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) camera to PC via USB-UART. 
 
