@@ -558,7 +558,7 @@ Enter the default login and password (login `admin`, password `12345`).
 
 After logging in to the camera, set a new password (don't forget to write it down!). 
 
-In the Firmware/Firmware section, follow the steps given in the prompts.
+In the Updates/Firmware section, follow the steps given in the prompts.
 
 DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINISHED!
 
