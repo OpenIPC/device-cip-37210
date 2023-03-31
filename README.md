@@ -532,6 +532,14 @@ watchdog:
 ```
 
 
+| GPIO | Purpose | 
+| --- | --- |
+| 62 | irSensorPin |
+| 64 | irCutPin1 |
+| 63 | backlightPin |
+| 51 | speakerPin |
+| 2 | Reset Button |
+
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
 ## Frequently asked questions
@@ -581,6 +589,12 @@ DO NOT CLOSE, REFRESH, OR NAVIGATE AWAY FROM THIS PAGE UNTIL THE PROCESS IS FINI
 +  flip: true
 ```
 3) Reboot the camera
+
+**What happens if you press and hold the reset button from the moment the camera is turned on until the image appears on the OpenIPC firmware? **
+
+Nothing.
+
+Nothing will also happen if you press the reset button after the camera has been loaded.
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
