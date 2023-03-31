@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/1933140/228862478-eafe0b8b-65b3-48ac-a
 
 https://user-images.githubusercontent.com/1933140/228871373-fedda60f-3a15-43d6-ad3c-cd15a85213cc.mp4
 
-
+Do not short the wire ends together! Do not short the contacts together!
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
