@@ -236,7 +236,7 @@ it will setup partion for 16 megabyte spi flash.
 
 Camera will reboot immediatly. 
 
-To enter OpenIPC U-boot console again hit Ctrl+C during message appear.
+To enter OpenIPC U-boot console again hit any key during message appear.
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
