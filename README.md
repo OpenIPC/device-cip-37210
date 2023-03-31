@@ -186,7 +186,7 @@ where:
 6) Load OpenIPC `u-boot-hi3518ev200-universal.bin` U-Boot with [OpenIPC BURN utility](https://github.com/OpenIPC/burn) to SoC RAM. 
     Videos [here](https://www.youtube.com/playlist?list=PLh0sgk8j8CfsMPq9OraSt5dobTIe8NXmw).
     
-7) **From this step without a backup it will be impossible to restore the factory firmware!**
+7) **From this step without a [backup](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#backup-factory-firmware) it will be impossible to restore the factory firmware!**
 
     Execute from PuTTY command line  in OpenIPC U-boot command line (line by line and not all together):
  
