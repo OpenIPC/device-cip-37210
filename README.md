@@ -539,6 +539,9 @@ watchdog:
 | 63 | backlightPin |
 | 51 | speakerPin |
 | 2 | Reset Button |
+| 3 | WiFi power |
+| 0 | Red LED |
+| 1 | White LED |
 
 [Back to Table of contents](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#table-of-contents)
 
