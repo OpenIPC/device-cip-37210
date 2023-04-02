@@ -82,6 +82,8 @@ CIP-37210 16mb SPI flash partitions table for OpenIPC
 | Rootfs data (overlay) | mtd4 | 8,6875 MB | 8896 KB | 9109504 bytes | 0x8B0000 | 0x750000 | 0xFFFFFF |
 | TOTAL |  | 16 MB | 16384 KB | 16777216 bytes | 0x1000000 |  |  |
 
+**MTD** subsystem (stands for Memory Technology Devices) provides an abstraction layer for raw flash devices. It makes it possible to use the same API when working with different flash types and technologies, e.g. NAND Flash, NOR Flash, etc. NAND and NOR are basic digital logic functions or gates. NAND stands for “Not AND”  and “NOR”  for “Not OR”.
+
 **U-Boot** (short for Universal Bootloader) is an open-source boot loader software that is commonly used in embedded systems and devices.
 It is responsible for initializing the hardware and starting the operating system on the device.
 
