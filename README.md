@@ -73,14 +73,14 @@ Do not short the wire ends together! Do not short the contacts together!
 
 ## Partitions 
 CIP-37210 16mb SPI flash partitions table for OpenIPC
-|  | Decimal size mega bytes | Decimal size kilo bytes | Decimal size  bytes | Hexadecimal size bytes | Hexadecimal start address | Hexadecimal end address |
-| --- | --- | --- | --- | --- | --- | --- |
-| U-Boot | 0,25 MB | 256 KB | 262144 bytes | 0x40000 | 0x0 | 0x3FFFF |
-| U-boot environment | 0,0625 MB | 64 KB | 65536 bytes | 0x10000 | 0x40000 | 0x4FFFF |
-| Kernel (uImage) | 2 MB | 2048 KB | 2097152 bytes | 0x200000 | 0x50000 | 0x24FFFF |
-| Root file system | 5 MB | 5120 KB | 5242880 bytes | 0x500000 | 0x250000 | 0x74FFFF |
-| Rootfs data (overlay) | 8,6875 MB | 8896 KB | 9109504 bytes | 0x8B0000 | 0x750000 | 0xFFFFFF |
-| TOTAL | 16 MB | 16384 KB | 16777216 bytes | 0x1000000 |  |  |
+|  | MTD | Decimal size mega bytes | Decimal size kilo bytes | Decimal size  bytes | Hexadecimal size bytes | Hexadecimal start address | Hexadecimal end address |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| U-Boot | mtd0 | 0,25 MB | 256 KB | 262144 bytes | 0x40000 | 0x0 | 0x3FFFF |
+| U-boot environment | mtd1 | 0,0625 MB | 64 KB | 65536 bytes | 0x10000 | 0x40000 | 0x4FFFF |
+| Kernel (uImage) | mtd2 | 2 MB | 2048 KB | 2097152 bytes | 0x200000 | 0x50000 | 0x24FFFF |
+| Root file system | mtd3 | 5 MB | 5120 KB | 5242880 bytes | 0x500000 | 0x250000 | 0x74FFFF |
+| Rootfs data (overlay) | mtd4 | 8,6875 MB | 8896 KB | 9109504 bytes | 0x8B0000 | 0x750000 | 0xFFFFFF |
+| TOTAL |  | 16 MB | 16384 KB | 16777216 bytes | 0x1000000 |  |  |
 
 **U-Boot** (short for Universal Bootloader) is an open-source boot loader software that is commonly used in embedded systems and devices.
 It is responsible for initializing the hardware and starting the operating system on the device.
