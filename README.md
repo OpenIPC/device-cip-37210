@@ -170,9 +170,7 @@ where:
    If not so, repeat from step 2.
    Save CIP37210-fullflash.bin file to safe place.
 
-   To make sure that the dump is correct - it is highly recommended (at your discretion) to perform this procedure at least twice (or better three times). And then compare the copies to each other for changes (e.g. by using the binary file compare program like `hexcmp`) - there should not be any! Note that in this case the backups must be taken without starting the factory firmware, i.e. two or more times the backup must be performed only from the OpenIPC BERN without a single start of the factory firmware! This is very important because otherwise the copies will be different and cannot be compared.
-
-Translated with www.DeepL.com/Translator (free version)
+To make sure that the dump is correct - it is highly recommended (at your discretion) to perform this procedure at least twice (or better three times). And then compare the copies to each other for changes (e.g. by using the binary file compare program like `hexcmp`) - there should not be any! Note that in this case the backups must be taken without starting the factory firmware, i.e. two or more times the backup must be performed only from the OpenIPC BERN without a single start of the factory firmware! This is very important because otherwise the copies will be different and cannot be compared.
  
  Each dump is unique, because it contains unique camera id and keys. If you flash someone else's dump - it will be 
  a clone, which means that the two devices will not be able to work simultaneously in the application on the phone.
