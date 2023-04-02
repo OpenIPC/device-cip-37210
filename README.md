@@ -104,7 +104,7 @@ a) Clear the space on the microSD card for the backup dump
 
 b) Insert the prepared microSD card into the camera
 
-c) Connect the camera to the computer with the USB-UART adapter
+c) [Connect](https://github.com/OpenIPC/device-cip-37210/blob/main/README.md#connecting-usb-uart-adapter) the camera to the computer with the USB-UART adapter
 
 d) Read the content of spi flash to SoC RAM with OpenIPC U-Boot uploaded with [OpenIPC BURN utility](https://github.com/OpenIPC/burn) to camera
 
