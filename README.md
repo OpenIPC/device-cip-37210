@@ -457,7 +457,7 @@ You need to change values to yours accordingly.
 
 For the most stable operation of the device it is recommended to disable additional services: HLS, OSD, Motion and RTSP sub-stream.
 
-Majestic configuration file sample:
+Majestic configuration file sample `/etc/majestic.yaml`:
 
 ```
 system:
